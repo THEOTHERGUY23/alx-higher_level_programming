@@ -2,5 +2,5 @@
 def square_matrix_simple(matrix=[]):
     squared = []
     for line in matrix:
-        squared.appended([**2 for c in line])
-        return squared
+        squared.append([x**2 for x in line])
+    return squared
