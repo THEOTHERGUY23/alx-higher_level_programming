@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-"""Class Square."""
+"""Square module."""
 
 class Square:
     """Print a square."""
@@ -9,6 +8,6 @@ class Square:
         """Initialize a new Square.
 
         Args:
-            size (int): New square size"""
-
+            size (int): New square size.
+        """
         self.__size = size

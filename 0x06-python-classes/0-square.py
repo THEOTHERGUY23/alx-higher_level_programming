@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-"""Empty spuare file"""
+"""Square module"""
 
 class Square:
     """Describe a square."""

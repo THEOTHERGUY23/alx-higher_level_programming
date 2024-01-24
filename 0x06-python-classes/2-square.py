@@ -1,3 +1,6 @@
+#!/bin/python3
+"""Square module."""
+
 class Square:
     """Represent a square."""
 
@@ -7,7 +10,6 @@ class Square:
         Args:
             size (int): New square size
         """
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
