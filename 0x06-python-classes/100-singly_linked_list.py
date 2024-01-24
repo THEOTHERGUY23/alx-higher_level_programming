@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 
+"""define classes for singly-linked lists."""
+
 class Node:
     """Represent a node in a singly-linked list."""
 
     def __init__(self, data, next_node=None):
+        """Initialisation of new node.
+
+        Args:
+            data (int): new node data, new_node (node): The next node in the new one."""
 
         self.data = data
         self.next_node = next_node
@@ -39,6 +45,12 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
+        """Insertion of a new node in the SinglyyLinkedList,
+
+        the node is inserted numerically.
+
+        Args:
+        value (Node): node to insert."""
 
         new = Node(value)
         if self.__head is None:
@@ -56,7 +68,7 @@ class SinglyLinkedList:
             tmp.next_node = new
 
     def __str__(self):
-
+    """Define the print() of a SinglyLinkedList."""
         values = []
         tmp = self.__head
         while tmp is not None:

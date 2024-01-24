@@ -3,5 +3,5 @@
 """Empty spuare file"""
 
 class Square:
-    """Print a square."""
+    """Describe a square."""
     pass

@@ -1,9 +1,14 @@
 #!/usr/bin/python3
 
+"""Class Square definition"""
+
 class Square:
     """Represent a square."""
 
     def __init__(self, size=0, position=(0, 0)):
+        """Initialisation of new square.
+        Arg:
+            size (int): New square size position (int, int): New square position."""
 
         self.size = size
         self.position = position
@@ -40,7 +45,7 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-
+        """Print the square with # character."""
         if self.__size == 0:
             print("")
             return
