@@ -1,18 +1,26 @@
 #!/usr/bin/python3
-"""Defines a name-printing function."""
+"""Module for text_indentation method."""
 
 
-def say_my_name(first_name, last_name=""):
-    """Print a name.
+def text_indentation(text):
+    """Method for adding 2 new lines after '.?:' chars.
 
     Args:
-        first_name (str): The first name to print.
-        last_name (str): The last name to print.
+        text: The str text.
+
     Raises:
-        TypeError: If either of first_name or last_name are not strings.
+        TypeError: If text is not a str.
     """
-    if not isinstance(first_name, str):
-        raise TypeError("first_name must be a string")
-    if not isinstance(last_name, str):
-        raise TypeError("last_name must be a string")
-    print("My name is {} {}".format(first_name, last_name))
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+
+    for delim in ".?:":
+        # print(delim, text.split(delim))
+        text = (delim + "\n\n").join(
+            [line.strip(" ") for line in text.split(delim)])
+
+    print(text, end="")
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/5-text_indentation.txt")
